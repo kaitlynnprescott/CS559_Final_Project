@@ -1,6 +1,8 @@
 import pandas as pd 
 import numpy as np 
 import ast
+import json
+# from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 '''
 This file is for preprocessing our data. 
@@ -10,13 +12,30 @@ We will save the data to a new csv file to be used with our methods.
 '''
 
 
+
+def text_to_list(x):
+    if pd.isna(x):
+        return ''
+    else:
+        return ast.literal_eval(x)
+
+def parse_json(x):
+    try:
+        return json.loads(x.replace("'", '"'))[0]['name']
+    except:
+        return ''
+
+
 def main():
     full_data = pd.read_csv('train.csv')
     
     y = full_data['genres']
 
-    x = full_data.drop(columns=['genres', 'id', 'imdb_id', 'poster_path', 'homepage', 'production_countries', 'status', 'original_title', 'original_language'], axis = 1)
+    x = full_data.drop(columns=['genres', 'id', 'imdb_id', 'poster_path', 'homepage', 'production_countries', 'status', 'original_title', 'spoken_languages'], axis = 1)
 
+    # make target rows into a list
+    y = y.apply(parse_json)
+    y = y.apply(text_to_list)
 
     # parse crew, save director and producer to new columns, delete crew column, insert director and producer columns.
     
@@ -61,5 +80,17 @@ def main():
        
     x['director'] = director
     x['producer'] = producer
+
+    # analyser = SentimentIntensityAnalyzer()
+    x['overview'] = x['overview'].fillna('')
+    x['tagline'] = x['tagline'].fillna('')
+
+    for col in ['belongs_to_collection', 'production_companies', 'Keywords']:
+        x[col] = x[col].apply(parse_json)
+        x[col] = x[col].apply(text_to_list)
+    
+    x['belongs_to_collenction'] = 1*(~x['belongs_to_collection'].isna())
+
+    print(x['belongs_to_collection'].head())
 
 main()
