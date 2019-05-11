@@ -1,16 +1,13 @@
-import pandas as pd 
-import numpy as np 
+import numpy as np
+import pandas as pd
+#for reading in data properly
 import ast
 import json
-# from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-'''
-This file is for preprocessing our data. 
-We removed irrelevant columns, and modified others to make data more easily parsed.
-We will save the data to a new csv file to be used with our methods.
+all_data = pd.read_csv('train.csv')
 
-'''
-
+genre_set = {'Comedy'}#set of all unique genres in dataset
+genre_dict = {}#maps genre string to id (index label vector)
 
 
 def text_to_list(x):
@@ -25,72 +22,47 @@ def parse_json(x):
     except:
         return ''
 
+def parse_all_genres_json(x):
+    try:
+        json_genres = json.loads(x.replace("'", '"'))
+        numElems = len(json_genres)
+        for i in range(numElems):
+            genre_set.add(json_genres[i]['name'])
+    except:
+        return ''
 
-def main():
+def parse_genres_json(x):
+    try:
+        json_genres = json.loads(x.replace("'", '"'))
+        numElems = len(json_genres)
+        ret = [0]*len(genre_dict) #20 0s
+        for i in range(numElems):
+            ret[genre_dict[(json_genres[i]['name'])]] = 1
+        return ret
+    except:
+        return ''
+
+def getAllGenres():
     full_data = pd.read_csv('train.csv')
-    
+
     y = full_data['genres']
+    y.apply(parse_all_genres_json)
 
-    x = full_data.drop(columns=['genres', 'id', 'imdb_id', 'poster_path', 'homepage', 'production_countries', 'status', 'original_title', 'spoken_languages'], axis = 1)
 
-    # make target rows into a list
-    y = y.apply(parse_json)
-    y = y.apply(text_to_list)
+#get set to dictionary for indexing of target vectors
+def getGenreDict():
+    index = 0
+    for genre in genre_set:
+        genre_dict[genre] = index
+        index += 1
 
-    # parse crew, save director and producer to new columns, delete crew column, insert director and producer columns.
-    
-    x["crew"] = x["crew"].fillna("")
-    crew = x['crew']
-    director = []
-    producer = []
-    for i in range(len(x)):
-        # print(i)
-        dir_name = ""
-        pro_name = ""
-        data = x['crew'][i]
-        if data == "":
-            director.append("")
-            producer.append("")
-            continue
-        data_dict = ast.literal_eval(data)
-        
-        for cm in range(len(data_dict)):
-            member = data_dict[cm]
-            # find director
-            if "job" not in member.keys():
-                continue
-            if member["job"] == "Director":
-                dir_name = member["name"]
-                break
-            else:
-                continue
-        director.append(dir_name)
-        
-        for cm in range(len(data_dict)):
-            member = data_dict[cm]
-            # find producer
-            if "job" not in member.keys():
-                continue
-            if member["job"] == "Producer":
-                pro_name = member["name"]
-                break
-            else:
-                continue
-        producer.append(pro_name)
-       
-    x['director'] = director
-    x['producer'] = producer
+def getGenresVect():
+    y = all_data['genres']
+    y = y.apply(parse_genres_json)
+    return y
 
-    # analyser = SentimentIntensityAnalyzer()
-    x['overview'] = x['overview'].fillna('')
-    x['tagline'] = x['tagline'].fillna('')
-
-    for col in ['belongs_to_collection', 'production_companies', 'Keywords']:
-        x[col] = x[col].apply(parse_json)
-        x[col] = x[col].apply(text_to_list)
-    
-    x['belongs_to_collenction'] = 1*(~x['belongs_to_collection'].isna())
-
-    print(x['belongs_to_collection'].head())
-
-main()
+#main
+getGenreDict()
+print(genre_dict)
+print()
+print(getGenresVect())
