@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.24)  17 MAY 2019 10:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.24)  17 MAY 2019 12:29
 entering extended mode
 **./report.tex
 (report.tex
@@ -1053,83 +1053,147 @@ Underfull \vbox (badness 4940) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3049) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 129.
+(Font)              scaled to size 6.0pt on input line 127.
  [2.2]
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 132.
+surrounding objects on input line 135.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 132.
+surrounding objects on input line 135.
 
-<all_genres.png, id=128, 709.65125pt x 468.75125pt>
+<all_genres.png, id=132, 709.65125pt x 468.75125pt>
 File: all_genres.png Graphic file (type png)
  <use all_genres.png>
-Package pdftex.def Info: all_genres.png used on input line 132.
+Package pdftex.def Info: all_genres.png used on input line 135.
 (pdftex.def)             Requested size: 241.14749pt x 159.28748pt.
 
 
-Class acmart Warning: A possible image without description on input line 135.
+Class acmart Warning: A possible image without description on input line 138.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 1552) has occurred while \output is active []
+
+ [3.3 <./all_genres.png>]
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 155.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 152.
+surrounding objects on input line 155.
 
-
-Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 152.
-
-<reduced_genres.png, id=130, 732.7375pt x 490.83376pt>
+<reduced_genres.png, id=140, 732.7375pt x 490.83376pt>
 File: reduced_genres.png Graphic file (type png)
 
 <use reduced_genres.png>
-Package pdftex.def Info: reduced_genres.png used on input line 152.
+Package pdftex.def Info: reduced_genres.png used on input line 155.
 (pdftex.def)             Requested size: 241.14749pt x 161.53375pt.
 
 
-Class acmart Warning: A possible image without description on input line 155.
+Class acmart Warning: A possible image without description on input line 158.
 
-[3.3 <./all_genres.png> <./reduced_genres.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4.4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+[4.4 <./reduced_genres.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5.5]
+Underfull \vbox (badness 5091) has occurred while \output is active []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6.6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [7.7]
+! Misplaced alignment tab character &.
+l.249 \noindent[7] J Chen, James &
+                                   Tsai, Chen-An & Moon, Hojin & Ahn, Hongsh...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.249 \noindent[7] J Chen, James & Tsai, Chen-An &
+                                                   Moon, Hojin & Ahn, Hongsh...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.249 ...en, James & Tsai, Chen-An & Moon, Hojin &
+                                                   Ahn, Hongshik & J Young, ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.249 ..., Chen-An & Moon, Hojin & Ahn, Hongshik &
+                                                   J Young, John & Chen, Chu...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.249 ..., Hojin & Ahn, Hongshik & J Young, John &
+                                                   Chen, Chun-houh & James, ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.249 ...gshik & J Young, John & Chen, Chun-houh &
+                                                   James, Dr. (2019). The Us...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
 
 Class acmart Warning: Some images may lack descriptions.
 
 
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
+Overfull \vbox (1.87225pt too high) has occurred while \output is active []
 
-[7.7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
+
+[8.8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 255.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 255.
  (report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 255.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 255.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 5670B273714541B226882D0A546BC229;4585.
+(rerunfilecheck)             Checksum: 5D4078536C1628BC08F943C1EFB6C7A6;4766.
  ) 
 Here is how much of TeX's memory you used:
- 17953 strings out of 493333
- 267829 string characters out of 3139182
- 391647 words of memory out of 3000000
- 20838 multiletter control sequences out of 15000+200000
+ 17956 strings out of 493333
+ 267867 string characters out of 3139182
+ 390647 words of memory out of 3000000
+ 20839 multiletter control sequences out of 15000+200000
  81696 words of font info for 151 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,11n,94p,1891b,430s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1139,9 +1203,9 @@ les/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}<C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/libertine/LinBiolinumTB.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/libertine/LinLibertineT.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/libertine/LinLibertineTB.pfb>
-Output written on report.pdf (7 pages, 464661 bytes).
+Output written on report.pdf (8 pages, 469869 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
- 15087 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 193 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
+ 15095 words of extra memory for PDF output out of 17280 (max. 10000000)
 
